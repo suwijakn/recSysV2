@@ -10,7 +10,7 @@ st.title('Select Product')
 url = 'https://raw.githubusercontent.com/suwijakn/recSysV2/master/june-21-2022-product_img.csv'
 #df = pd.read_csv(url, index_col=0)
 df_img = pd.read_csv(url) 
-url = 'https://raw.githubusercontent.com/suwijakn/recSysV2/master/simMatrix_june-22-2022.csv'
+url = 'https://raw.githubusercontent.com/suwijakn/recSysV2/master/simMatrix_june-24-2022.csv'
 df_sim = pd.read_csv(url) 
 
 
