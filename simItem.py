@@ -4,11 +4,11 @@ import pandas as pd
 pd.options.display.float_format = "{:,.2f}".format
 st.title('Select Product')
 
-#df_img = pd.read_csv("/Users/suwijakn/Desktop/Swoop Buddy/New/june-21-2022-product_img.csv") 
-#df_sim = pd.read_csv("/Users/suwijakn/Desktop/Swoop Buddy/New/simMatrix_june-22-2022.csv") 
+#df_img = pd.read_csv("june-24-2022-product_img.csv") 
+#df_sim = pd.read_csv("simMatrix_june-24-2022.csv") 
 
-url = 'https://raw.githubusercontent.com/suwijakn/recSysV2/master/june-21-2022-product_img.csv'
-#df = pd.read_csv(url, index_col=0)
+url = 'https://raw.githubusercontent.com/suwijakn/recSysV2/master/june-24-2022-product_img.csv'
+
 df_img = pd.read_csv(url) 
 url = 'https://raw.githubusercontent.com/suwijakn/recSysV2/master/simMatrix_june-24-2022.csv'
 df_sim = pd.read_csv(url) 
@@ -37,6 +37,7 @@ df_sim[(df_sim['x'] == option)].sort_values('sim', ascending=False)['sku'].head(
 
 list_rec = df_sim[(df_sim['x'] == option)].sort_values('sim', ascending=False)['sku'].values[0:5]
 list_sim = df_sim[(df_sim['x'] == option)].sort_values('sim', ascending=False)['sim'].values[0:5]
+
 col1, col2, col3,col4, col5 = st.columns(5)
 
 with col1:
